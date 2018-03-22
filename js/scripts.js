@@ -1,30 +1,28 @@
-var add = function (number1, number2) {
-  return number1 + number2; };
+//Back-end
+var add = function(number1, number2) {
+        return number1 + number2;
+      };
 
-var number1 = parseInt(prompt("Give me a Number to add for you mate"));
-var number2 = parseInt(prompt("Just one more"));
+      var subtract = function(number1, number2) {
+        return number1 - number2;
+      };
 
-var result = add(number1, number2);
+      var multiply = function(number1, number2) {
+        return number1 * number2;
+      };
 
-alert(result);
-
-var Subtract = function (number1, number2) { return number1 - number2; };
-
-var number1 = parseInt(prompt("Give me a Number to Subtract for you mate"));
-var number2 = parseInt(prompt("Just one more"));
-var result = Subtract(number1, number2);
-
-alert(result);
-
-var divide = function (number1, number2) { return number1 / number2; };
-
-var number1 = parseInt(prompt("Give me a Number to divide for you mate"));
-var number2 = parseInt(prompt("Just one more"));
-var result = divide(number1, number2);
-alert(result);
-var multiply = function (number1, number2) { return number1 * number2; };
-
-var number1 = parseInt(prompt("Give me a Number to multiply for you mate"));
-var number2 = parseInt(prompt("Just one more"));
-var result = multiply(number1, number2);
-alert(result);
+      var divide = function(number1, number2) {
+        return number1 / number2;
+      };
+//Front-end
+      $(document).ready(function() {
+        $("form#add").submit(function(event) {
+          event.preventDefault();
+          var number1 = parseInt($("#add1").val());
+          var number2 = parseInt($("#add2").val());
+          var result = add(number1, number2);
+          $("#output").text(result);
+          var dob = $("#born").val();
+    
+        });
+      });
